@@ -10,7 +10,7 @@ jobs:
       with:
         submodules: false
 
-    - uses: mohuishou/notion-blog-actions/notion@main
+    - uses: Goatherdsk/notion-blog-actions/notion@main
       with:
         token: ${{ secrets.NOTION_TOKEN }}
         token_v2: ${{ secrets.NOTION_TOKEN_V2 }}
@@ -19,7 +19,7 @@ jobs:
         output: "./tmp/"
 
     - name: "migrate image"
-      uses: mohuishou/notion-blog-actions/migrate@main
+      uses: Goatherdsk/notion-blog-actions/migrate@main
       with:
         input: "./tmp/*.md"
 
@@ -30,8 +30,8 @@ jobs:
 
     - name: git setting
       run: |
-        git config --global user.email "1@lailin.xyz"
-        git config --global user.name "mohuishou"
+        git config --global user.email "1240539326@qq.com"
+        git config --global user.name "Goatherdsk"
       
     - name: update blog
       run: |
